@@ -1,0 +1,18 @@
+*************************************************** what is Firebase? **********************************************
+
+-> Firebase is a fully manages Backend Service by Google.
+-> Independent of Flutter
+-> Features :
+    > Data Storage / Database 
+    > APIs
+    > sdks and Packages
+    > File Storage
+    > Built in Authentication Service
+    > Push Notifications in both Android and iOS 
+    > Anallytics Service
+    > On-demand Server-side Code (Cloud Functions)
+    
+
+-> Firestore sdk -  database provided by firebase.
+
+this sdk helps to communicate to Cloud firestore database using flutter.
