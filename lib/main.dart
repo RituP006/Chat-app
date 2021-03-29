@@ -17,10 +17,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Chat App',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         primarySwatch: Colors.brown,
         backgroundColor: Colors.brown,
-        accentColor: Colors.amberAccent,
+        accentColor: Colors.deepPurple,
         accentColorBrightness: Brightness.dark,
         buttonTheme: ButtonTheme.of(context).copyWith(
             buttonColor: Colors.brown.shade800,
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
               return ChatScreen();
             }
             // if(userSnapShot.connectionState==ConnectionState.waiting){
-            //   return 
+            //   return
             // }
             return AuthScreen();
           }),
