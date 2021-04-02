@@ -16,3 +16,10 @@
 -> Firestore sdk -  database provided by firebase.
 
 this sdk helps to communicate to Cloud firestore database using flutter.
+
+
+
+********************************************** Push Notifications ******************************************
+
+-> How Push Notifications works?
+- You can't directly send messages to devices.
