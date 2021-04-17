@@ -1,9 +1,12 @@
-import 'package:chat_app/screens/chat_screen.dart';
+import 'dart:async';
+
+import 'package:flutter/services.dart'; // used here to connect to native code
 import 'package:flutter/material.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import './screens/auth_screen.dart';
+import './screens/chat_screen.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -11,14 +14,21 @@ void main() async {
   runApp(MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
+  @override
+  _MyAppState createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
+  static const platform = const MethodChannel('project.flutter.dev/battery');
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Chat App',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.brown,
+        primarySwatch: Colors.pink,
         backgroundColor: Colors.brown,
         accentColor: Colors.deepPurple,
         accentColorBrightness: Brightness.dark,

@@ -65,6 +65,7 @@ class _AuthformState extends State<Authform> {
   Widget build(BuildContext context) {
     return Center(
       child: Card(
+        elevation: 0,
         margin: EdgeInsets.all(20),
         child: SingleChildScrollView(
           child: Padding(
@@ -74,8 +75,31 @@ class _AuthformState extends State<Authform> {
                 child: Column(
                   mainAxisSize: MainAxisSize.min,
                   children: <Widget>[
+                    if (_isLogin)
+                      Container(
+                        padding: EdgeInsets.all(20),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          image: DecorationImage(
+                            fit: BoxFit.contain,
+                            image: AssetImage('assets/image/img3.jpg'),
+                          ),
+                        ),
+                        child: Opacity(
+                          opacity: 0,
+                          child: Text('hello',
+                              style: TextStyle(
+                                  fontSize: 100, color: Colors.white)),
+                        ),
+                      ),
+                    SizedBox(
+                      height: 20,
+                    ),
                     if (!_isLogin) UserImagePicker(_pickedImage),
                     TextFormField(
+                      autocorrect: false,
+                      textCapitalization: TextCapitalization.none,
+                      enableSuggestions: false,
                       key: ValueKey('email'),
                       validator: (value) {
                         if (value.isEmpty || !value.contains('@')) {
@@ -93,6 +117,8 @@ class _AuthformState extends State<Authform> {
                     ),
                     if (!_isLogin)
                       TextFormField(
+                        autocorrect: true,
+                        textCapitalization: TextCapitalization.words,
                         key: ValueKey('username'),
                         validator: (value) {
                           if (value.isEmpty || value.length < 4) {

@@ -23,3 +23,23 @@ this sdk helps to communicate to Cloud firestore database using flutter.
 
 -> How Push Notifications works?
 - You can't directly send messages to devices.
+- You have to use official  push notification servers and protocol. 
+- this servers need identification, therefore you link the app to push notification servers.
+- with this you can send notification to all the devices you own.
+
+-> Firebase & Push notification
+- Firebase Cloud Messaging service provide Push notification server, it is the official push notification service for android.
+- This service is independent of other firebase services, it can be used as standalone feature from firebase.
+
+
+****************************************** Running native device code in flutter **************************************
+follow this to learn more : https://flutter.dev/docs/development/platform-integration/platform-channels
+
+
+
+******************************************* Publishing Steps ****************************************
+
+> Test & optimize code
+> Set Application name & identifier
+> Prepare Third-party Services for production (eg.API keys)
+> Add app icons & splash screen

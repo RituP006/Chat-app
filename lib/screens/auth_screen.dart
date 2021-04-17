@@ -88,10 +88,33 @@ class _AuthScreenState extends State<AuthScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Theme.of(context).primaryColor,
-      body: Authform(
-        _submitAuthForm,
-        _isLoading,
+      resizeToAvoidBottomInset: false,
+      appBar: AppBar(
+        centerTitle: true,
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        elevation: 0,
+      ),
+      // backgroundColor: Theme.of(context).primaryColor,
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            SizedBox(
+              height: 50,
+              child: Text(
+                'Connect',
+                style: TextStyle(
+                  color: Theme.of(context).primaryColor,
+                  fontFamily: 'Lobster',
+                  fontSize: 35,
+                ),
+              ),
+            ),
+            Authform(
+              _submitAuthForm,
+              _isLoading,
+            ),
+          ],
+        ),
       ),
     );
   }

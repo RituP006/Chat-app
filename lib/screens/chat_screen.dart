@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
 import '../widgets/chats/messages.dart';
@@ -9,10 +8,12 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.pink.shade50,
       appBar: AppBar(
         title: Text('Connect'),
         actions: [
           DropdownButton(
+            underline: Container(),
             items: [
               DropdownMenuItem(
                 child: Container(
@@ -44,15 +45,29 @@ class ChatScreen extends StatelessWidget {
           )
         ],
       ),
-      body: Container(
-        child: Column(
-          children: <Widget>[
-            Expanded(
-              child: Messages(),
+      body: Stack(
+        children: [
+          Opacity(
+            opacity: 0.2,
+            child: Center(
+              child: CircleAvatar(
+                radius: 150,
+                backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+                backgroundImage: AssetImage('assets/image/img3.jpg'),
+              ),
             ),
-            NewMessage(),
-          ],
-        ),
+          ),
+          Container(
+            child: Column(
+              children: <Widget>[
+                Expanded(
+                  child: Messages(),
+                ),
+                NewMessage(),
+              ],
+            ),
+          )
+        ],
       ),
     );
   }
