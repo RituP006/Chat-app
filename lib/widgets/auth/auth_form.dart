@@ -65,6 +65,7 @@ class _AuthformState extends State<Authform> {
   Widget build(BuildContext context) {
     return Center(
       child: Card(
+        shadowColor: Colors.pink.shade900,
         elevation: 0,
         margin: EdgeInsets.all(20),
         child: SingleChildScrollView(
@@ -79,10 +80,9 @@ class _AuthformState extends State<Authform> {
                       Container(
                         padding: EdgeInsets.all(20),
                         decoration: BoxDecoration(
-                          shape: BoxShape.circle,
                           image: DecorationImage(
                             fit: BoxFit.contain,
-                            image: AssetImage('assets/image/img3.jpg'),
+                            image: AssetImage('assets/image/img4.png'),
                           ),
                         ),
                         child: Opacity(

@@ -4,7 +4,7 @@ class MessageBubble extends StatelessWidget {
   final String message;
   final String username;
   final String userImage;
-  bool isMe;
+  final bool isMe;
   final Key key;
 
   MessageBubble(this.message, this.username, this.userImage, this.isMe,

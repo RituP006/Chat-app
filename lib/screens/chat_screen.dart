@@ -8,7 +8,6 @@ class ChatScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.pink.shade50,
       appBar: AppBar(
         title: Text('Connect'),
         actions: [
@@ -52,8 +51,9 @@ class ChatScreen extends StatelessWidget {
             child: Center(
               child: CircleAvatar(
                 radius: 150,
+                foregroundColor: Colors.deepPurpleAccent,
                 backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-                backgroundImage: AssetImage('assets/image/img3.jpg'),
+                backgroundImage: AssetImage('assets/image/img4.png'),
               ),
             ),
           ),

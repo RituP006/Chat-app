@@ -89,15 +89,14 @@ class _AuthScreenState extends State<AuthScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       resizeToAvoidBottomInset: false,
-      appBar: AppBar(
-        centerTitle: true,
-        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
-        elevation: 0,
-      ),
+
       // backgroundColor: Theme.of(context).primaryColor,
       body: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(
+              height: 100,
+            ),
             SizedBox(
               height: 50,
               child: Text(
